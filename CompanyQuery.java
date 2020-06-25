@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class Driver {
+public class CompanyQuery {
 
 	public static void main(String[] args) {
 		String jdbcUrl = "jdbc:postgresql://localhost:5432/Company";
