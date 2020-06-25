@@ -11,7 +11,7 @@ public class CompanyQuery {
 			Connection myconn = DriverManager.getConnection(jdbcUrl, user, pw);
 			//2. create a statement
 			Statement mystmt = myconn.createStatement();
-			
+			//1. (SQL) Query the database to find all orders from Customer with ID=14
 			//execute a sql query
 			ResultSet myrs = mystmt.executeQuery("SELECT * FROM \"Orders\" WHERE \"Customer ID\" = 1 ");
 			
@@ -31,6 +31,7 @@ public class CompanyQuery {
 									+ myrs.getInt("Status ID") );
 			}
 
+			//2. (Prepared Statement): Query the database to find all orders from Customer with ID=14
 			//sql to select from orders string
 			String order = "SELECT * FROM \"Orders\" WHERE  \"Customer ID\" = ?";
 			//create prepared statement
